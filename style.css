@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+}
+
+html,
+body {
+    --black: hsl(240, 6%, 13%);
+    --grey: hsl(240, 9%, 89%);
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    display: grid;
+    place-items: center;
+}
+
+main {
+    background: url(images/background.svg) no-repeat center/cover;
+    width: 100vw;
+    min-height: 812px;
+    height: 100vh;
+}
+
+.container {
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: var(--grey);
+}
+
+.avatar {
+    width: 10rem;
+    margin: 11.5rem auto 0;
+    position: relative;
+}
+
+.avatar span {
+    position: absolute;
+    top: -15px;
+    z-index: 1;
+}
+
+.avatar>img {
+    width: 10rem;
+    height: 11.5rem;
+    object-fit: cover;
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+#userName {
+    background: -webkit-linear-gradient(left, #f80099, #fd892a);
+    background: linear-gradient(to right, #f80099, #fd892a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+a {
+    color: var(--grey);
+    text-decoration: none;
+    margin-top: 0.25rem;
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    align-items: center;
+}
+
+a:hover {
+    opacity: 0.3;
+}
+
+a:hover:after {
+    opacity: 1;
+}
+
+p {
+    margin-top: 2rem;
+}
+
+ul {
+    margin-top: 4rem;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+
+/* responsividade no desktop */
+
+@media (max-width: 1920px) {
+    .main {
+        background: url(images/background.svg) no-repeat center;
+        width: 100vw;
+        min-height: 812px;
+        height: 100vh;
+    }
+    .background {
+        background: -webkit-linear-gradient(left, #e2028c, #e97a1f);
+        background: linear-gradient(to right, #e2028c, #e97a1f);
+    }
+}
+
+
+/* responsividade no iPad Pro */
+
+@media (width: 1024px) and (height: 1366px) {
+    .main {
+        background: url(images/background.svg) no-repeat center/cover;
+        width: 100vw;
+        min-height: 812px;
+        height: 100vh;
+    }
+}
+
+
+/* responsividade no iPad */
+
+@media (width: 768px) and (height: 1024px) {
+    .main {
+        background: url(images/background.svg) no-repeat center/cover;
+        width: 100vw;
+        min-height: 812px;
+        height: 100vh;
+    }
+}
